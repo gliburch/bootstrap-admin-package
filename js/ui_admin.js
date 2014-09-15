@@ -1,7 +1,7 @@
 $(function() {
 
 	var publicComponents = {
-		tabWidthDropdown: function() {
+		tabWithDropdown: function() {
 			var tab_with_dropdown_buttons = $('ul.nav li a').not('[data-toggle="dropdown"]');
 			var tab_with_dropdown_all = $('ul.nav li');
 			tab_with_dropdown_buttons.on('click', function(e) {
