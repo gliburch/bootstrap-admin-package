@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Bootstrap Mockup for Ellog</title>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="js/ui_admin.js"></script>
+<link rel="stylesheet" href="css/ui_admin.css">
+</head>
+<body>
+
+<div class="container">
+	<div calss="row">
+		<h1>Dashboard</h1>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-xs-5">
+			<table class="table table-condensed table-bordered">
+			<tbody>
+				<tr>
+				<td colspan="5">
+				  <p>예약번호: <strong>WXRXXZ</strong> (B), BSP/ET</p>
+				  <p>결제시한: <strong>2014/09/12 15:00</strong></p>
+				</td>
+				</tr>
+				<tr>
+				<td>예약 <span class="label label-default">OK</span></td>
+				<td>요금 <span class="label label-warning">FY</span></td>
+				<td>결제 <span class="label label-warning">YY</span></td>
+				<td>취소 <span class="label label-default">NN</span></td>
+				<td>발권 <span class="label label-warning">YY</span></td>
+				</tr>
+			</tbody>
+			</table>
+			<p>
+				<strong>SKD:</strong> PR 09/23/ICN <span class="text-primary">RT</span> 09/ 26/MNL <span class="text-primary">Y OK</span> 12개월
+			</p>
+		</div>
+		<div class="col-xs-7">
+			<table class="table table-condensed table-bordered">
+			<tbody>
+				<tr>
+				<th class="active">예약일시</th>
+				<td>14/09/11 17:41</td>
+				<th class="active">항공사TL</th>
+				<td>2014/09/13</td>
+				<th class="active">PNR타입</th>
+				<td>국제선개인</td>
+				</tr>
+				<tr>
+				<th class="active">판매사이트</th>
+				<td>ㅇㅇㅇ항공</td>
+				<th class="active">온/오프</th>
+				<td>온라인</td>
+				<th class="active">자동발권</th>
+				<td>Y <button type="button" class="btn btn-warning btn-xs">반자동발권</button></td>
+				</tr>
+				<tr>
+				<th class="active">예약일시</th>
+				<td colspan="4">홍길동(gil-dong), 01000000000, mail@mail.com</td>
+				<td colspan="1"><button type="button" class="btn btn-info btn-xs">승객마이페이지</button></td>
+				</td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="btn-toolbar" role="toolbar">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs">메일/SMS</button>
+					<button type="button" class="btn btn-default btn-xs">ONP</button>
+					<button type="button" class="btn btn-default btn-xs">온라인상담</button>
+					<button type="button" class="btn btn-default btn-xs">PNR갱신</button>
+					<button type="button" class="btn btn-default btn-xs">예약복사</button>
+					<button type="button" class="btn btn-default btn-xs">인보이스</button>
+					<button type="button" class="btn btn-default btn-xs">발권의뢰서</button>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-info btn-xs">예약기본정보수정</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">요청변경이력</div>
+				<div class="panel-body">
+					<table class="table table-condensed table-striped">
+					<tbody>
+						<tr>
+						<td>2014/09/15 10:54</td>
+						<td>여권정보-불필요</td>
+						<td>관리자</td>
+						</tr>
+						<tr>
+						<td>2014/09/15 10:54</td>
+						<td><a href="#">카드승인-완료</a></td>
+						<td></td>
+						</tr>
+						<tr>
+						<td>2014/09/15 10:54</td>
+						<td><a href="#">발권-완료</a></td>
+						<td></td>
+						</tr>
+						<tr>
+						<td>2014/09/15 10:54</td>
+						<td><a href="#">여권정보등록-완료</a></td>
+						<td></td>
+						</tr>
+						<tr>
+						<td>2014/09/15 10:54</td>
+						<td>에약완료</td>
+						<td></td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="inputONP" class="control-label">ONP</label>
+							<input id="inputONP" type="text" class="form-control input-sm" placeholder="내용을 입력해주세요">
+							<button type="submit" class="btn btn-default btn-sm">추가</button>
+						</div>
+					</form>
+				</div>
+				<div class="panel-body">
+					<table class="table table-condensed table-striped">
+					<thead>
+						<tr>
+						<th>내용</th>
+						<th>작성자</th>
+						<th>작성일시</th>
+						<th>삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<td>내용이 들어갑니다</td>
+						<td>관리자</td>
+						<td>2014-0-15 15:25</td>
+						<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
+						</tr>
+						<tr>
+						<td>내용이 들어갑니다</td>
+						<td>관리자</td>
+						<td>2014-0-15 15:25</td>
+						<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span></button></td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<ul class="nav nav-pills" sbe-ui="sample-tab">
+		<li><a href="#">예약마스터</a></li>
+		<li>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">승객관리 <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+			<li><a href="#">탑승객이름/취소</a></li>
+			<li><a href="#">여권/마일리지</a></li>
+			<li><a href="#">체류지정보</a></li>
+			<li><a href="#">탑승객추가</a></li>
+			</ul>
+		</li>
+		<li><a href="#">스케줄</a></li>
+		<li>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">요금 <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+			<li><a href="#">탑승객요금정보</a></li>
+			<li><a href="#">요금규정</a></li>
+			</ul>
+		</li>
+		<li><a href="#">결제</a></li>
+		<li><a href="#">입급매칭</a></li>
+		<li><a href="#">증빙</a></li>
+		<li><a href="#">발권/ETR</a></li>
+		<li><a href="#">환불</a></li>
+		</ul>
+	</div>
+	<div class="row" sbe-ajax="sample-container">
+		<p style="padding:100px;text-align:center">Ajax contents here</p>
+	</div>
+	<script>
+	var tab = $('[sbe-ui="sample-tab"] li a').not('[data-toggle="dropdown"]');
+	var cont = $('[sbe-ajax="sample-container"]');
+	tab.on('click', function() {
+		cont.empty();
+		cont.html('<p style="padding:100px;text-align:center">' + this.textContent + ' contents append...!</p>');
+	});
+	</script>
+</div>
+
+</body>
+</html>
