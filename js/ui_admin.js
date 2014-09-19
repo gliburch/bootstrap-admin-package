@@ -1,17 +1,25 @@
+var component = {
+	tabWithDropdown: function() {
+		$(document).on('click', 'ul.nav li a', function(e) {
+			e.preventDefault();
+			if($(this).attr('data-toggle') == 'dropdown') {
+				console.log('toggle');
+			} else {
+				console.log($(this).closest('li'));
+				$('ul.nav li').removeClass('active');
+				$(this).closest('li').addClass('active');
+			}
+			$(this).parents('li')[1] ? $($(this).parents('li')[1]).addClass('active') : false;
+		});
+	}
+}
+
 $(function() {
 
-	var publicComponents = {
-		tabWithDropdown: function() {
-			var tab_with_dropdown_buttons = $('ul.nav li a').not('[data-toggle="dropdown"]');
-			var tab_with_dropdown_all = $('ul.nav li');
-			tab_with_dropdown_buttons.on('click', function(e) {
-				e.preventDefault();
-				tab_with_dropdown_all.removeClass('active');
-				$(this).closest('li').addClass('active');
-				$(this).parents('li')[1] ? $($(this).parents('li')[1]).addClass('active') : false;
-			});
-			$(tab_with_dropdown_buttons[0]).trigger('click');
-		}()
-	}
+	component.tabWithDropdown();	
 	
 })
+
+
+
+
