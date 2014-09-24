@@ -3,9 +3,7 @@ var component = {
 		$(document).on('click', 'ul.nav li a', function(e) {
 			e.preventDefault();
 			if($(this).attr('data-toggle') == 'dropdown') {
-				console.log('toggle');
 			} else {
-				console.log($(this).closest('li'));
 				$('ul.nav li').removeClass('active');
 				$(this).closest('li').addClass('active');
 			}
@@ -16,10 +14,6 @@ var component = {
 
 $(function() {
 
-	component.tabWithDropdown();	
+	component.tabWithDropdown();
 	
-})
-
-
-
-
+});

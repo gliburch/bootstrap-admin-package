@@ -5,12 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Dashboard | Bootstrap admin package</title>
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<!-- bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+
+<!-- hightlight.js -->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+
+<!-- bootstrap admin package custom libraries -->
 <script src="js/ui_admin.js"></script>
 <link rel="stylesheet" href="css/ui_admin.css">
+
+<!-- site -->
+<script src="js/snippet.js"></script>
+
 </head>
 <body>
 
@@ -144,93 +156,262 @@
 			<p>
 				이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다.
 			</p>
-			<p>
-				이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다.
-			</p>
+			<hr>
 			<h3>Filter <small>필터</small></h3>
 			<p>
 				대개 검색 필터가 상위에 위치합니다.
 			</p>
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="form-inline">
-						<div class="form-group">
-							<label class="sr-only" for="exampleInputEmail2">Email address</label>
-							<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-						</div>
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-addon">@</div>
-								<input class="form-control" type="email" placeholder="Enter email">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="sr-only" for="exampleInputPassword2">Password</label>
-							<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox"> Remember me
-							</label>
-						</div>
-						<button type="submit" class="btn btn-primary btn-sm">검색</button>
-					</div>
+			<snippet>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="form-inline">
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputEmail2">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-group-addon">@</div>
+					<input class="form-control" type="email" placeholder="Enter email">
 				</div>
 			</div>
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputPassword2">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Remember me
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary btn-sm">검색</button>
+		</div>
+	</div>
+</div>
+			</snippet>
+			<hr>
 			<h3>Tab <small>탭</small></h3>
 			<p>
 				탭은 항상 자주 등장하는 컴포넌트입니다.
 			</p>
-			<ul class="nav nav-tabs">
-			<li><a href="#">예약마스터</a></li>
-			<li>
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">승객관리 <span class="caret"></span></a>
-				<ul class="dropdown-menu" role="menu">
-				<li><a href="#">탑승객이름/취소</a></li>
-				<li><a href="#">여권/마일리지</a></li>
-				<li><a href="#">체류지정보</a></li>
-				<li><a href="#">탑승객추가</a></li>
-				</ul>
-			</li>
-			<li><a href="#">스케줄</a></li>
-			<li>
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">요금 <span class="caret"></span></a>
-				<ul class="dropdown-menu" role="menu">
-				<li><a href="#">탑승객요금정보</a></li>
-				<li><a href="#">요금규정</a></li>
-				</ul>
-			</li>
-			<li><a href="#">결제</a></li>
-			<li><a href="#">입급매칭</a></li>
-			<li><a href="#">증빙</a></li>
-			<li><a href="#">발권/ETR</a></li>
-			<li><a href="#">환불</a></li>
+			<div class="row">
+				<div class="col-xs-6">
+					<snippet>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<ul class="nav nav-tabs">
+		<li><a href="#">예약마스터</a></li>
+		<li>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">승객관리 <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+			<li><a href="#">탑승객이름/취소</a></li>
+			<li><a href="#">여권/마일리지</a></li>
+			<li><a href="#">체류지정보</a></li>
+			<li><a href="#">탑승객추가</a></li>
 			</ul>
+		</li>
+		<li><a href="#">스케줄</a></li>
+		<li>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">요금 <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+			<li><a href="#">탑승객요금정보</a></li>
+			<li><a href="#">요금규정</a></li>
+			</ul>
+		</li>
+		<li><a href="#">결제</a></li>
+		</ul>
+		<div style="padding:20px 15px">
+		  <p>탭 메뉴를 눌러서 <mark>주제</mark>을(를) 바꿔 보세요.</p>
+		</div>
+	</div>
+</div>
+<script>
+(function() {
+	var nav = $('.nav-tabs li a').not('[data-toggle="dropdown"]');
+	var div = $('.nav-tabs + div');
+	nav.on('click', function() {
+		div.find('mark').html(this.textContent);
+	});	
+})();
+</script>
+					</snippet>
+				</div>
+				<div class="col-xs-6">
+					<snippet>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<ul class="nav nav-pills">
+		<li><a href="#">예약마스터</a></li>
+		<li>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">승객관리 <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+			<li><a href="#">탑승객이름/취소</a></li>
+			<li><a href="#">여권/마일리지</a></li>
+			<li><a href="#">체류지정보</a></li>
+			<li><a href="#">탑승객추가</a></li>
+			</ul>
+		</li>
+		<li><a href="#">스케줄</a></li>
+		<li>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">요금 <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+			<li><a href="#">탑승객요금정보</a></li>
+			<li><a href="#">요금규정</a></li>
+			</ul>
+		</li>
+		<li><a href="#">결제</a></li>
+		</ul>
+		<div style="padding:20px 15px">
+		  <p>탭 메뉴를 눌러서 <mark>주제</mark>을(를) 바꿔 보세요.</p>
+		</div>
+	</div>
+</div>
+<script>
+(function() {
+	var nav = $('.nav-pills li a').not('[data-toggle="dropdown"]');
+	var div = $('.nav-pills + div');
+	nav.on('click', function() {
+		div.find('mark').html(this.textContent);
+	});
+})();
+</script>
+					</snippet>
+				</div>
+			</div>
+			<hr>
 			<h3>Buttons <small>버튼</small></h3>
 			<p>
 				다양한 색상과 종류의 버튼을 지원합니다.
 			</p>
-			<div class="panel panel-default">
-				<div class="panel-heading">버튼 모음</div>
-				<div class="panel-body">
-					<p>
-						<button type="button" class="btn btn-primary btn-lg">Large button</button>
-						<button type="button" class="btn btn-default btn-lg">Large button</button>
-					</p>
-					<p>
-						<button type="button" class="btn btn-primary">Default button</button>
-						<button type="button" class="btn btn-default">Default button</button>
-					</p>
-					<p>
-						<button type="button" class="btn btn-primary btn-sm">Small button</button>
-						<button type="button" class="btn btn-default btn-sm">Small button</button>
-					</p>
-					<p>
-						<button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-						<button type="button" class="btn btn-default btn-xs">Extra small button</button>
-					</p>
+			<snippet>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<p>
+			<button type="button" class="btn btn-primary btn-lg">로그인</button>
+			<button type="button" class="btn btn-default btn-lg">검색</button>
+		</p>
+		<p>
+			<button type="button" class="btn btn-primary">저장</button>
+			<button type="button" class="btn btn-default">취소</button>
+		</p>
+		<p>
+			<button type="button" class="btn btn-primary btn-sm">삽입</button>
+			<button type="button" class="btn btn-default btn-sm">추가</button>
+		</p>
+		<p>
+			<button type="button" class="btn btn-primary btn-xs">정보수정</button>
+			<button type="button" class="btn btn-default btn-xs">확대보기</button>
+		</p>
+	</div>
+</div>
+			</snippet>
+			<hr>
+			<h3>Table <small>테이블</small></h3>
+			<div class="row">
+				<div class="col-xs-6">
+					<p>대개 관리자 화면 에서는 보통 한 화면 내에 최대한 많은 정보를 담아야 하는 요구사항이 많은 만큼, 높이가 낮고 행간 구분이 편리한 className 을 기본으로 채택하였습니다.</p>
+					<snippet>
+<table class="table table-condensed table-striped table-hover">
+<thead>
+	<tr>
+	<th scope="col">Number</th>
+	<th scope="col">Subject</th>
+	<th scope="col">Views</th>
+	<th scope="col">Date</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+	<td>1</td>
+	<td>문장이 들어갑니다.</td>
+	<td>14</td>
+	<td><time datetime="1985-08-31">08/31</time></td>
+	</tr>
+	<tr>
+	<td>2</td>
+	<td>문장이 들어갑니다.</td>
+	<td>14</td>
+	<td><time datetime="1985-08-31">08/31</time></td>
+	</tr>
+	<tr>
+	<td>3</td>
+	<td>문장이 들어갑니다.</td>
+	<td>14</td>
+	<td><time datetime="1985-08-31">08/31</time></td>
+	</tr>
+</tbody>
+</table>
+					</snippet>
+				</div>
+				<div class="col-xs-6">
+					<p>테이블 컬럼이 우리가 원하는 대로 너비를 적절하게 스스로 잡아주면 좋겠지만 그렇지 않은 경우, 테이블 셀 정렬이 각양각색인 경우 참고할 수 있는 다양한 className 예시입니다.</p>
+					<snippet>
+<table class="table table-condensed table-striped table-hover">
+<colgroup>
+	<col width="10%">
+	<col>
+	<col width="10%">
+	<col width="20%">
+</colgroup>
+<thead>
+	<tr>
+	<th scope="col" class="text-center">Number</th>
+	<th scope="col" class="text-center">Subject</th>
+	<th scope="col" class="text-center">Views</th>
+	<th scope="col" class="text-center">Date</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+	<td>1</td>
+	<td>문장이 들어갑니다.</td>
+	<td>14</td>
+	<td><time datetime="1985-08-31">08/31</time></td>
+	</tr>
+	<tr>
+	<td class="text-center">2</td>
+	<td>문장이 들어갑니다.</td>
+	<td class="text-center">14</td>
+	<td class="text-center"><time datetime="1985-08-31">08/31</time></td>
+	</tr>
+	<tr class="text-center">
+	<td>3</td>
+	<td>문장이 들어갑니다.</td>
+	<td>14</td>
+	<td><time datetime="1985-08-31">08/31</time></td>
+	</tr>
+</tbody>
+</table>
+					</snippet>
 				</div>
 			</div>
+			<hr>
+			<h3>Ultra Densed Table <small>빡빡한 테이블</small></h3>
+			<p>경우에 따라서는 매우 많은 양의 데이터를 한꺼번에 노출시키는 바람에 화면을 벗어날 수 밖에 없는 테이블도 왕왕 구현하게 됩니다. 모든 내용을 한 화면에 담을 수는 없지만, 횔 스크롤을 통해 테이블의 형태를 보존하고 탐색이 가능하게끔 조치를 취해줘야 할 수도 있습니다.</p>
+			<snippet>
+<div class="table-responsive">
+	<table class="table table-condensed table-striped table-hover">
+	<thead>
+		<tr>
+		<th scope="col">#1</th><th scope="col">#2</th><th scope="col">#3</th><th scope="col">#4</th><th scope="col">#5</th><th scope="col">#6</th><th scope="col">#7</th><th scope="col">#8</th><th scope="col">#9</th><th scope="col">#10</th><th scope="col">#11</th><th scope="col">#12</th><th scope="col">#13</th><th scope="col">#14</th><th scope="col">#15</th><th scope="col">#16</th><th scope="col">#17</th><th scope="col">#18</th><th scope="col">#19</th><th scope="col">#20</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td>
+		</tr>
+		<tr>
+		<td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td>
+		</tr>
+		<tr>
+		<td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td><td>-----</td>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+	</table>
+</div>
+			</snippet>
 		</div>
 		
 	</section>
