@@ -17,24 +17,23 @@ header.container_top {
   top:0;
   right:0;
   left:0;
-  height:85px;
-  padding:15px 0 0 0;
+  height:171px;
 }
 section.container_side {
   position:absolute;
-  top:100px;
+  top:171px;
   bottom:50px;
   left:0;
-  width:160px;
+  width:180px;
   padding:15px 0 0 0;
 }
 section.container_content {
   position:absolute;
-  top:100px;
+  overflow:auto;
+  top:171px;
   right:0;
   bottom:50px;
-  left:160px;
-  padding:15px 0 0 0;
+  left:180px;
 }
 footer.container_bottom {
   position:absolute;
@@ -42,6 +41,7 @@ footer.container_bottom {
   bottom:0;
   left:0;
   height:50px;
+  border-top:1px solid #ccc;
 }
 
 
@@ -49,5 +49,5 @@ header.container_top,
 section.container_side,
 section.container_content,
 footer.container_bottom {
-  box-shadow:0 0 1px 0 rgba(0,0,0,0.1);
+  /*box-shadow:0 0 1px 0 rgba(0,0,0,0.1);*/
 }
