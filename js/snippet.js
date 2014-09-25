@@ -10,31 +10,42 @@ $(function() {
     // var code_block = $('<pre/>').append($('<code/>').addClass('html').append($.trim(snippet_decoded)));
     
     $('<div></div>')
-      .append($('<pre></pre>'))
+      .append($('<pre class="scroll-top"></pre>'))
       .find('pre')
-        .append($('<code></code>'))
-        .addClass('html')
+        .append($('<code class="html"></code>'))
         .find('code')
           .append(snippet_html_decoded)
         .end()
       .end()
-      .append($('<button></button>'))
+      .append($('<button class="btn btn-default btn-xs">Copy</button>'))
       .find('button')
-        .addClass('btn btn-default btn-xs')
-        .text('Copy')
         .on('click', function() {
           prompt('[Ctrl-c] 를 눌러 복사하고, 원하는 곳에 [Ctrl-v] 를 눌러 붙여넣으세요.', snippet_html);
         })
       .end()
       .insertAfter(obj);
 
+    $('pre code').scroll(function() {
+      var scroll_from_top = $(this).scrollTop();
+      var scroll_from_bottom = this.scrollHeight - $(this).scrollTop() - $(this).height();
+      var box = $(this).closest('pre');
+      if(scroll_from_top < 30) {
+        box.addClass('scroll-top');
+        box.removeClass('scroll-middle');
+        box.removeClass('scroll-bottom');
+      } else if(scroll_from_top >= 30 && scroll_from_bottom >= 30) {
+        box.removeClass('scroll-top');
+        box.addClass('scroll-middle');
+        box.removeClass('scroll-bottom');
+      } else if(scroll_from_bottom < 30) {
+        box.removeClass('scroll-top');
+        box.removeClass('scroll-middle');
+        box.addClass('scroll-bottom');
+      }
+    });
+
 
   });
-
-  $('pre').css({
-    overflow: 'auto',
-    height: 240,
-  })
 
   hljs.configure({
     tabReplace: '  ', // 4 spaces

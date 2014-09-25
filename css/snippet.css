@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+pre {
+  overflow:hidden;
+  position:relative;
+  padding:0;
+}
+pre:before,
+pre:after {
+  content:"";
+  display:block;
+  z-index:10;
+  opacity:0;
+  position:absolute;
+  right:5px;
+  left:5px;
+  height:1px;
+  box-shadow:0 0 30px 3px #000;
+  -webkit-transition:all 0.2s 0 linear;
+  transition:all 0.2s 0 linear;
+}
+pre:before {
+  top:-10px;
+}
+pre:after {
+  bottom:-10px;
+}
+pre.scroll-top:after {
+  opacity:1;
+}
+pre.scroll-middle:before {
+  opacity:1;
+}
+pre.scroll-middle:after {
+  opacity:1;
+}
+pre.scroll-bottom:before {
+  opacity:1;
+}
+pre code {
+  overflow:auto;
+  height:140px;
+}
