@@ -12,15 +12,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
 
+<!-- Bootstrp-datepicker assets -->
+<link rel="stylesheet" href="assets/bootstrap-datepicker/datepicker.css">
+<script src="assets/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
 <!-- Bootstrap Admin Package libraries -->
-<script src="js/ui_admin.js"></script>
 <link rel="stylesheet" href="css/ui_admin.css">
+<script src="js/ui_admin.js"></script>
 
 <!-- Only for demo site. Not needed to package.  -->
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
-<link rel="stylesheet" href="css/snippet.css">
-<script src="js/snippet.js"></script>
+<link rel="stylesheet" href="assets/snippet/snippet.css">
+<script src="assets/snippet/snippet.js"></script>
 
 </head>
 <body>
@@ -153,40 +157,109 @@
 		<div class="container-fluid">
 			<h2>Hello! <small>안녕하세요!</small></h2>
 			<p>
-				이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 이 페이지는 부트스크랩 기반 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다.
+				이 페이지는 <strong>Bootstrap v3.2.0</strong> 기반으로 관리자 화면을 구성하는데 필요한 컴포넌트를 쉽게 활용할 수 있도록 목업(Mock-up)화 한 문서입니다. 기본 Bootstrap <a href="http://getbootstrap.com/css/">CSS</a>, <a href="http://getbootstrap.com/components/">Documents</a>를 참고하여 모든 HTML을 작성하였으며, 필요에 따라 관련 플러그인을 일부 사용하였습니다.
 			</p>
 			<hr>
 			<h3>Filter <small>필터</small></h3>
 			<p>
-				대개 검색 필터가 상위에 위치합니다.
+				관리자 화면에선 상상을 초월하는 다양한 검색 필터 양식이 요구됩니다.
 			</p>
 			<snippet>
 <div class="panel panel-default">
 	<div class="panel-body">
 		<div class="form-inline">
 			<div class="form-group">
-				<label class="sr-only" for="exampleInputEmail2">Email address</label>
-				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+				<label class="sr-only" for="bookingNumber">예약번호</label>
+				<input type="text" class="form-control input-sm" id="bookingNumber" placeholder="예약번호">
 			</div>
 			<div class="form-group">
+				<label class="sr-only" for="userName">이름</label>
+				<input type="text" class="form-control input-sm" id="userName" placeholder="이름" size="5">
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="chargerName">담당자 이름</label>
+				<input type="text" class="form-control input-sm" id="chargerName" placeholder="담당자 이름" size="10" disabled>
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="authCode">인증코드(글자 숨기기)</label>
+				<input type="password" class="form-control input-sm" id="authCode" placeholder="인증코드(글자 숨기기)">
+			</div>
+			<p></p>
+			<select class="form-control input-sm">
+			<option>도로명 주소</option>
+			<option>지번 주소</option>
+			</select>
+			<div class="form-group">
+				<label class="sr-only" for="address">주소</label>
+				<input type="text" class="form-control input-sm" id="address" placeholder="주소를 입력해주세요." size="50">
+			</div>
+			<button type="button" class="btn btn-info btn-sm">우편번호 찾기</button>
+			<button type="button" class="btn btn-default btn-sm">초기화</button>
+			<button type="button" class="btn btn-link btn-sm">도로명 주소란?</button>
+			<p></p>
+			<select class="form-control input-sm">
+			<option>대한민국</option>
+			</select>
+			<div class="form-group">
+				<label class="sr-only" for="phoneNumber">전화번호</label>
 				<div class="input-group">
-					<div class="input-group-addon">@</div>
-					<input class="form-control" type="email" placeholder="Enter email">
+					<div class="input-group-addon">+82</div>
+					<input class="form-control input-sm" id="phoneNumber" type="text" placeholder="010-0000-0000" size="14">
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="sr-only" for="exampleInputPassword2">Password</label>
-				<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+				<label class="sr-only" for="email">이메일</label>
+				<div class="input-group">
+					<input class="form-control input-sm" type="text" placeholder="account" size="10">
+					<div class="input-group-addon">@</div>
+					<input class="form-control input-sm" type="email" placeholder="email.com" size="10">
+				</div>
 			</div>
-			<div class="checkbox">
-				<label>
-					<input type="checkbox"> Remember me
-				</label>
+			<p></p>
+			<div class="form-group">
+				<label class="sr-only" for="bookingDate">예약날짜</label>
+				<div class="input-group date">
+					<input type="text" id="bookingDate" class="form-control input-sm" placeholder="MM/DD/YYYY" size="12"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+				</div>
 			</div>
-			<button type="submit" class="btn btn-primary btn-sm">검색</button>
+			<div class="form-group">
+				<label class="sr-only" for="bookingDateRange">시작일 ~ 종료일</label>
+				<div class="input-group input-daterange">
+					<input type="text" class="form-control input-sm" placeholder="MM/DD/YYYY">
+					<span class="input-group-addon">~</span>
+					<input type="text" class="form-control input-sm" placeholder="MM/DD/YYYY">
+				</div>
+			</div>
+			<span class="help-block">날짜 선택 컴포넌트는 <span class="text-primary">bootstrap-datepicker</span> 라이브러리를 사용합니다.</span>
+			<p></p>
+			<div class="row">
+				<div class="col-xs-2">
+					<input type="text" class="form-control" placeholder=".col-xs-2">
+				</div>
+				<div class="col-xs-3">
+					<input type="text" class="form-control" placeholder=".col-xs-3">
+				</div>
+				<div class="col-xs-4">
+					<input type="text" class="form-control" placeholder=".col-xs-4">
+				</div>
+			</div>
+			<span class="help-block">경우에 따라 간격을 띄우거나 정렬이 필요할 경우 기본 <a href="http://getbootstrap.com/css/#grid">Grid system</a>을 활용할 수 있습니다.</span>
+			<hr>
+			<div class="pull-right">
+				<div class="checkbox">
+					<label><input type="checkbox"> 기억하기</label>
+				</div>
+				<button type="submit" class="btn btn-primary">검색</button>
+			</div>
 		</div>
 	</div>
 </div>
+<script>
+(function() {
+	$('.input-group.date').datepicker();
+	$('.input-daterange').datepicker();
+})();
+</script>
 			</snippet>
 			<hr>
 			<h3>Tab <small>탭</small></h3>
@@ -220,7 +293,7 @@
 		<li><a href="#">결제</a></li>
 		</ul>
 		<div style="padding:20px 15px">
-		  <p>탭 메뉴를 눌러서 <mark>주제</mark>을(를) 바꿔 보세요.</p>
+			<p>탭 메뉴를 눌러서 <mark>주제</mark>을(를) 바꿔 보세요.</p>
 		</div>
 	</div>
 </div>
@@ -261,7 +334,7 @@
 		<li><a href="#">결제</a></li>
 		</ul>
 		<div style="padding:20px 15px">
-		  <p>탭 메뉴를 눌러서 <mark>주제</mark>을(를) 바꿔 보세요.</p>
+			<p>탭 메뉴를 눌러서 <mark>주제</mark>을(를) 바꿔 보세요.</p>
 		</div>
 	</div>
 </div>
