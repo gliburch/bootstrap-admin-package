@@ -9,7 +9,7 @@ $(function() {
 
     // var code_block = $('<pre/>').append($('<code/>').addClass('html').append($.trim(snippet_decoded)));
     
-    $('<div></div>')
+    $('<div style="overflow:hidden"></div>')
       .append($('<pre class="scroll-top"></pre>'))
       .find('pre')
         .append($('<code class="html"></code>'))
@@ -29,15 +29,15 @@ $(function() {
       var scroll_from_top = $(this).scrollTop();
       var scroll_from_bottom = this.scrollHeight - $(this).scrollTop() - $(this).height();
       var box = $(this).closest('pre');
-      if(scroll_from_top < 30) {
+      if(scroll_from_top < 20) {
         box.addClass('scroll-top');
         box.removeClass('scroll-middle');
         box.removeClass('scroll-bottom');
-      } else if(scroll_from_top >= 30 && scroll_from_bottom >= 30) {
+      } else if(scroll_from_top >= 20 && scroll_from_bottom >= 20) {
         box.removeClass('scroll-top');
         box.addClass('scroll-middle');
         box.removeClass('scroll-bottom');
-      } else if(scroll_from_bottom < 30) {
+      } else if(scroll_from_bottom < 20) {
         box.removeClass('scroll-top');
         box.removeClass('scroll-middle');
         box.addClass('scroll-bottom');
