@@ -40,5 +40,6 @@ pre.scroll-bottom:before {
 pre code {
   display:block;
   overflow:auto;
-  height:140px;
+  max-height:140px;
+  -webkit-overflow-scrolling:touch;
 }

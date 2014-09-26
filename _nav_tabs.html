@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <ul class="nav nav-tabs">
+    <li><a href="#">예약마스터</a></li>
+    <li>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">승객관리 <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+      <li><a href="#">탑승객이름/취소</a></li>
+      <li><a href="#">여권/마일리지</a></li>
+      <li><a href="#">체류지정보</a></li>
+      <li><a href="#">탑승객추가</a></li>
+      </ul>
+    </li>
+    <li><a href="#">스케줄</a></li>
+    <li>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">요금 <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+      <li><a href="#">탑승객요금정보</a></li>
+      <li><a href="#">요금규정</a></li>
+      </ul>
+    </li>
+    <li><a href="#">결제</a></li>
+    </ul>
+    <div style="padding:20px 15px">
+      <p>탭 메뉴를 눌러서 <mark>주제</mark>을(를) 바꿔 보세요.</p>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  var nav = $('.nav-tabs li a').not('[data-toggle="dropdown"]');
+  var div = $('.nav-tabs + div');
+  nav.on('click', function() {
+    div.find('mark').html(this.textContent);
+  }); 
+})();
+</script>

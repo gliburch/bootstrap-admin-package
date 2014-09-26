@@ -35,6 +35,7 @@ body {
     right:0;
     bottom:50px;
     left:180px;
+    -webkit-overflow-scrolling: touch;
   }
   footer.container_bottom {
     position:absolute;
