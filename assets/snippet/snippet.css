@@ -38,6 +38,7 @@ pre.scroll-bottom:before {
   opacity:1;
 }
 pre code {
+  display:block;
   overflow:auto;
   height:140px;
 }
