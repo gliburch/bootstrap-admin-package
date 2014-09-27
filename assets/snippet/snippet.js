@@ -17,14 +17,14 @@ $(function() {
 		var snippet_html_decoded = $.trim($('<div/>').text(snippet_html).html());
 		// <snippet> 뒤에 붙이는 코드블럭 템플릿
 		$('<div style="overflow:hidden"></div>')
-			.append($('<pre></pre>'))
+			.append('<pre></pre>')
 			.find('pre')
-				.append($('<code class="html"></code>'))
+				.append('<code class="html"></code>')
 				.find('code')
 					.append(snippet_html_decoded)
 				.end()
 			.end()
-			.append($('<button class="btn btn-info btn-xs pull-right">Copy</button>'))
+			.append('<button class="btn btn-info btn-xs pull-right">Copy</button>')
 			.find('button')
 				.on('click', function() {
 					prompt('[Ctrl-c] 를 눌러 복사하고, 원하는 곳에 [Ctrl-v] 를 눌러 붙여넣으세요.', snippet_html);
