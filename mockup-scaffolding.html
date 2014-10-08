@@ -191,25 +191,29 @@ hljs.initHighlightingOnLoad();
 				<input type="password" class="form-control input-sm" id="authCode" placeholder="인증코드(글자 숨기기)">
 			</div>
 			<p></p>
-			<select class="form-control input-sm">
-			<option>도로명 주소</option>
-			<option>지번 주소</option>
-			</select>
-			<button type="button" class="btn btn-link btn-sm">도로명 주소란?</button>
+			<div class="form-group">
+				<select class="form-control input-sm">
+				<option>도로명 주소</option>
+				<option>지번 주소</option>
+				</select>
+				<button type="button" class="btn btn-link btn-sm">도로명 주소란?</button>
+			</div>
 			<div class="form-group">
 				<label class="sr-only" for="zipcode">우편번호</label>
 				<input type="text" class="form-control input-sm" id="zipcode" placeholder="우편번호" size="10" disabled>
+				<button type="button" class="btn btn-info btn-sm">우편번호 찾기</button>
 			</div>
-			<button type="button" class="btn btn-info btn-sm">우편번호 찾기</button>
 			<div class="form-group">
 				<label class="sr-only" for="address">주소</label>
 				<input type="text" class="form-control input-sm" id="address" placeholder="주소를 입력해주세요." size="50">
+				<button type="button" class="btn btn-default btn-sm">초기화</button>
 			</div>
-			<button type="button" class="btn btn-default btn-sm">초기화</button>
 			<p></p>
-			<select class="form-control input-sm">
-			<option>대한민국</option>
-			</select>
+			<div class="form-group">
+				<select class="form-control input-sm">
+				<option>대한민국</option>
+				</select>
+			</div>
 			<div class="form-group">
 				<label class="sr-only" for="phoneNumber">전화번호</label>
 				<div class="input-group">
@@ -241,19 +245,6 @@ hljs.initHighlightingOnLoad();
 				</div>
 			</div>
 			<span class="help-block">날짜 선택 컴포넌트는 <span class="text-primary">bootstrap-datepicker</span> 라이브러리를 사용합니다.</span>
-			<p></p>
-			<div class="row">
-				<div class="col-md-2">
-					<input type="text" class="form-control" placeholder=".col-md-2">
-				</div>
-				<div class="col-md-3">
-					<input type="text" class="form-control" placeholder=".col-md-3">
-				</div>
-				<div class="col-md-4">
-					<input type="text" class="form-control" placeholder=".col-md-4">
-				</div>
-			</div>
-			<span class="help-block">경우에 따라 간격을 띄우거나 정렬이 필요할 경우 기본 <a href="http://getbootstrap.com/css/#grid">Grid system</a>을 활용할 수 있습니다.</span>
 			<hr>
 			<div class="row">
 				<div class="col-md-2">
@@ -343,10 +334,12 @@ hljs.initHighlightingOnLoad();
 			</p>
 			<div class="row">
 				<div class="col-md-6">
-					<snippet source="_nav_tabs.html"></snippet>
+					<snippet source="_nav_tabs.html">
+					</snippet>
 				</div>
 				<div class="col-md-6">
-					<snippet source="_nav_pills.html"></snippet>
+					<snippet source="_nav_pills.html">
+					</snippet>
 				</div>
 			</div>
 			<hr>
@@ -354,23 +347,32 @@ hljs.initHighlightingOnLoad();
 			<p>
 				다양한 색상과 종류의 버튼을 지원합니다.
 			</p>
-			<snippet source="_buttons.html"></snippet>
+			<snippet source="_buttons.html">
+			</snippet>
 			<hr>
 			<h3>Table <small>테이블</small></h3>
 			<div class="row">
 				<div class="col-md-6">
 					<p>대개 관리자 화면 에서는 보통 한 화면 내에 최대한 많은 정보를 담아야 하는 요구사항이 많은 만큼, 높이가 낮고 행간 구분이 편리한 className 을 기본으로 채택하였습니다.</p>
-					<snippet source="_table_condensed.html"></snippet>
+					<snippet source="_table_condensed.html">
+					</snippet>
 				</div>
 				<div class="col-md-6">
 					<p>테이블 컬럼이 우리가 원하는 대로 너비를 적절하게 스스로 잡아주면 좋겠지만 그렇지 않은 경우, 테이블 셀 정렬이 각양각색인 경우 참고할 수 있는 다양한 className 예시입니다.</p>
-					<snippet source="_table_cell_variation.html"></snippet>
+					<snippet source="_table_cell_variation.html">
+					</snippet>
 				</div>
 			</div>
 			<hr>
+			<h3>Table with Header <small>옵션 정보/기능이 포함된 테이블</small></h3>
+			<p>관리자 화면에서 자주 사용되는 테이블 정렬 및 레코드 제어 기능을 구현하기 위한 구성입니다.</p>
+			<snippet source="_table_with_header.html">
+			</snippet>
+			<hr>
 			<h3>Ultra Densed Table <small>빡빡한 테이블</small></h3>
 			<p>경우에 따라서는 매우 많은 양의 데이터를 한꺼번에 노출시키는 바람에 화면을 벗어날 수 밖에 없는 테이블도 왕왕 구현하게 됩니다. 모든 내용을 한 화면에 담을 수는 없지만, 횔 스크롤을 통해 테이블의 형태를 보존하고 탐색이 가능하게끔 조치를 취해줘야 할 수도 있습니다.</p>
-			<snippet source="_table_ultra_densed.html"></snippet>
+			<snippet source="_table_ultra_densed.html">
+			</snippet>
 		</div>
 		
 	</section>
