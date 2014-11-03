@@ -18,25 +18,32 @@
         <input type="password" class="form-control input-sm" id="authCode" placeholder="인증코드(글자 숨기기)">
       </div>
       <p></p>
-      <select class="form-control input-sm">
-      <option>도로명 주소</option>
-      <option>지번 주소</option>
-      </select>
-      <button type="button" class="btn btn-link btn-sm">도로명 주소란?</button>
+      <div class="form-group">
+        <label for="addrType" class="sr-only">주소 체계</label>
+        <select id="addrType" class="form-control input-sm">
+        <option>도로명 주소</option>
+        <option>지번 주소</option>
+        </select>
+        <button type="button" class="btn btn-link btn-sm">도로명 주소란?</button>
+      </div>
       <div class="form-group">
         <label class="sr-only" for="zipcode">우편번호</label>
-        <input type="text" class="form-control input-sm" id="zipcode" placeholder="우편번호" size="10" disabled>
-      </div>
-      <button type="button" class="btn btn-info btn-sm">우편번호 찾기</button>
-      <div class="form-group">
+        <div class="input-group">
+          <input type="text" class="form-control input-sm" id="zipcode" placeholder="우편번호" size="8" disabled>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-info btn-sm">찾기</button>
+          </span>
+        </div>
         <label class="sr-only" for="address">주소</label>
         <input type="text" class="form-control input-sm" id="address" placeholder="주소를 입력해주세요." size="50">
+        <button type="button" class="btn btn-default btn-sm">초기화</button>
       </div>
-      <button type="button" class="btn btn-default btn-sm">초기화</button>
       <p></p>
-      <select class="form-control input-sm">
-      <option>대한민국</option>
-      </select>
+      <div class="form-group">
+        <select class="form-control input-sm">
+        <option>대한민국</option>
+        </select>
+      </div>
       <div class="form-group">
         <label class="sr-only" for="phoneNumber">전화번호</label>
         <div class="input-group">
@@ -60,99 +67,81 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="sr-only" for="bookingDateRange">시작일 ~ 종료일</label>
         <div class="input-group input-daterange">
-          <input type="text" class="form-control input-sm" placeholder="MM/DD/YYYY">
+          <span class="input-group-addon">예약날짜</span>
+          <label class="sr-only" for="from">시작일</label>
+          <input type="text" id="from" class="form-control input-sm" placeholder="MM/DD/YYYY" size="12">
           <span class="input-group-addon">~</span>
-          <input type="text" class="form-control input-sm" placeholder="MM/DD/YYYY">
+          <label class="sr-only" for="to">종료일</label>
+          <input type="text" id="to" class="form-control input-sm" placeholder="MM/DD/YYYY" size="12">
         </div>
-      </div>
+      </div>      
       <span class="help-block">날짜 선택 컴포넌트는 <span class="text-primary">bootstrap-datepicker</span> 라이브러리를 사용합니다.</span>
-      <p></p>
-      <div class="row">
-        <div class="col-md-2">
-          <input type="text" class="form-control" placeholder=".col-md-2">
-        </div>
-        <div class="col-md-3">
-          <input type="text" class="form-control" placeholder=".col-md-3">
-        </div>
-        <div class="col-md-4">
-          <input type="text" class="form-control" placeholder=".col-md-4">
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon">활성화</span>
+          <span class="input-group-addon">
+            <label class="radio-inline"><input type="radio" checked="checked"> Y</label>
+            <label class="radio-inline"><input type="radio"> N</label>
+          </span>
         </div>
       </div>
-      <span class="help-block">경우에 따라 간격을 띄우거나 정렬이 필요할 경우 기본 <a href="http://getbootstrap.com/css/#grid">Grid system</a>을 활용할 수 있습니다.</span>
-      <hr>
-      <div class="row">
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 첫 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 두 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 세 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 네 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 다섯 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 여섯 번째 필터</label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 일곱 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 여덟 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 아홉 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 열 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 열 한 번째 필터</label>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="checkbox">
-            <label><input type="checkbox"> 열 두 번째 필터</label>
-          </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon"><input type="checkbox" checked="checked"></span>
+          <input type="text" class="form-control input-sm" placeholder="키워드 포함">
         </div>
       </div>
       <hr>
-      <div class="pull-right">
-        <div class="checkbox">
-          <label><input type="checkbox"> 기억하기</label>
+      <div class="row">
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox" checked="checked"> 첫 번째 필터</label>
         </div>
-        <button type="submit" class="btn btn-primary">검색</button>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 두 번째 필터</label>
+        </div>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 세 번째 필터</label>
+        </div>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 네 번째 필터</label>
+        </div>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 다섯 번째 필터</label>
+        </div>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 여섯 번째 필터</label>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 일곱 번째 필터</label>
+        </div>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 여덟 번째 필터</label>
+        </div>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 아홉 번째 필터</label>
+        </div>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 열 번째 필터</label>
+        </div>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 열 한 번째 필터</label>
+        </div>
+        <div class="col-md-2">
+          <label class="checkbox-inline"><input type="checkbox"> 열 두 번째 필터</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <div class="pull-left">
+      <button type="button" class="btn btn-default">옵션</button>
+    </div>
+    <div class="text-right">
+      <label><input type="checkbox"> 기억하기</label>
+      <button type="submit" class="btn btn-primary">검색</button>
     </div>
   </div>
 </div>

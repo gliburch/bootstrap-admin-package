@@ -3,37 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Dashboard</title>
+<title>Templates</title>
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<!-- Bootstrap default assets -->
-<script src="assets/jquery/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="assets/bootstrap/bootstrap-3.2.0.min.css">
-<script src="assets/bootstrap/bootstrap-3.2.0.min.js"></script>
+<!-- Bootstrap -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
-<!-- Bootstrp-datepicker assets -->
+<!-- Bootstrp Datepicker -->
 <link rel="stylesheet" href="assets/bootstrap-datepicker/datepicker.css">
 <script src="assets/bootstrap-datepicker/bootstrap-datepicker.js"></script>
 
-<!-- Bootstrap Admin Package libraries -->
-<link rel="stylesheet" href="assets/admin/ui_admin.css">
-<script src="assets/admin/ui_admin.js"></script>
+<!-- Bootstrap Admin Package -->
+<script src="assets/bootstrap-admin-package/bootstrap-admin-package.js"></script>
 
 <!-- Only for demo site. Not needed to package.  -->
+<link rel="stylesheet" href="assets/admin/ui_admin.css">
 <link rel="stylesheet" href="assets/snippet/snippet.css">
 <script src="assets/snippet/snippet.js"></script>
 <link rel="stylesheet" href="assets/highlight/highlight-default.min.css">
 <script src="assets/highlight/highlight.min.js"></script>
+
 <script>
 // Init hljs when all ajax call done
-$(function() {
-	$(document).ajaxStop(function() {
-	  hljs.configure({
-	    tabReplace: ' ',
-	  });
-	  hljs.initHighlightingOnLoad();
-	});	
-})
+hljs.configure({
+  tabReplace: ' ',
+});
+hljs.initHighlightingOnLoad();
 </script>
 
 </head>
